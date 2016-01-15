@@ -1,3 +1,13 @@
 name: Horseman
 main: io.github.mhoffmann98.horseman.Horseman
 version: 0.0.1
+
+commands:
+  horseman:
+    description: Enable or disable the plugin
+    usage: /<command> <enable|disable|toggle>
+    permission: Horseman.toggle
+
+permissions:
+  Horseman.toggle:
+    default: op

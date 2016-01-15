@@ -33,6 +33,9 @@ public class HorsemanEventListener implements Listener{
 			return;
 		}
 		
+		if(!plugin.horseSpawningEnabled())
+			return;
+		
 		if (item.getType() == Material.GOLDEN_APPLE && item.getDurability()==(short)0) { //normal, unenchanted golden apple (durability for enchanted apple is 1)
 			Horse h = (Horse) sender.getWorld().spawnEntity(e.getPlayer().getLocation(), EntityType.HORSE);
 	        h.setTamed(true);
